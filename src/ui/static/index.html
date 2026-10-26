@@ -362,6 +362,9 @@
   <!-- Application Logic & API Client -->
   <script>
     (function() {
+      // Base API URL (falls back to relative path or window.API_BASE_URL for decoupled deployments)
+      var API_BASE = window.API_BASE_URL || '';
+
       // Image Assets Map
       var fallbackImages = [
         '/static/images/rooftop.png',
@@ -449,7 +452,7 @@
       });
 
       // Fetch dynamic localities from backend
-      fetch('/api/v1/metadata/localities')
+      fetch(API_BASE + '/api/v1/metadata/localities')
         .then(function(res) { return res.json(); })
         .then(function(localities) {
           if (Array.isArray(localities) && localities.length > 0) {
@@ -614,7 +617,7 @@
           special_preferences: promptInput.value
         };
 
-        fetch('/api/v1/recommendations', {
+        fetch(API_BASE + '/api/v1/recommendations', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)

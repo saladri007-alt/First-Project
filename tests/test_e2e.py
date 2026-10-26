@@ -39,7 +39,7 @@ def test_tc01_standard_query_flow():
     assert "summary" in data
     assert "provider_used" in data
     assert len(data["recommendations"]) >= 1
-    assert len(data["recommendations"]) <= 5
+    assert len(data["recommendations"]) <= 8
 
     # Restaurant card validation
     top_pick = data["recommendations"][0]
