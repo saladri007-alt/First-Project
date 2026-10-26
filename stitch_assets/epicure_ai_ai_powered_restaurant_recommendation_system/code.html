@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#ffdad8","tertiary-fixed-dim":"#b9c8de","primary-container":"#ff535a","on-primary-fixed":"#410007","surface-bright":"#39393b","error":"#ffb4ab","on-tertiary":"#233143","on-secondary-fixed":"#241a00","on-secondary-fixed-variant":"#574500","on-error":"#690005","tertiary-fixed":"#d4e4fa","surface-tint":"#ffb3b1","on-primary-container":"#5b000e","secondary-container":"#af8d11","on-background":"#e5e1e4","on-tertiary-container":"#1c2b3c","primary":"#ffb3b1","surface-container-low":"#1c1b1d","tertiary":"#b9c8de","surface-container":"#201f21","outline":"#ab8987","on-primary":"#680011","on-primary-fixed-variant":"#92001c","outline-variant":"#5b403f","secondary":"#e9c349","secondary-fixed-dim":"#e9c349","primary-fixed-dim":"#ffb3b1","on-tertiary-fixed":"#0d1c2d","tertiary-container":"#8392a6","surface-variant":"#353437","inverse-on-surface":"#313032","error-container":"#93000a","secondary-fixed":"#ffe088","surface-container-high":"#2a2a2c","surface-dim":"#131315","inverse-primary":"#bb162c","on-surface":"#e5e1e4","surface-container-lowest":"#0e0e10","on-secondary":"#3c2f00","surface":"#131315","surface-container-highest":"#353437","on-tertiary-fixed-variant":"#39485a","on-error-container":"#ffdad6","background":"#131315","on-surface-variant":"#e4bebc","inverse-surface":"#e5e1e4","on-secondary-container":"#342800"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1.25rem","margin":"3rem","gutter-mobile":"1rem","gutter":"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-sm":"0.5rem"},"fontFamily":{"label-md":["Inter"],"title-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"display":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},"fontSize":{"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.05em","fontWeight":"600"}],"title-md":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"500"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"600"}],"display-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.06em","fontWeight":"500"}],"body-md":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"400"}],"display":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface-container-lowest text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Epicure AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WdrQtmSCe6mbpOqQVrrtjrUcQKyR4SijyYBYUmZc9JyJL8OKzS1g0z1Rb4SOqzI-JRpClPluRUP2QUzRPnbwWKsenTQCs3XX-c-x2fhdqFYnIrd1ETMPvY44F1HJ0JCm9Y4kG2_kHlv3ZutEvLVSf3pO0IIT049io4a2Tc1fBEf4YB-Bz097t7dXKwO64ZCOA1yFJEnPWcdenEEOV0UuKUHF-_d9jXsLQoHk93t7Q4CFY--XNH90eIx4Ig"/><span class="font-title-md text-title-md tracking-tight text-on-surface font-semibold">Epicure <span class="text-secondary">AI</span></span></div><div class="hidden sm:flex items-center px-space-xs py-0.5 rounded-full bg-surface-container-high shadow-[0_0_12px_rgba(233,195,73,0.25)]"><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase px-1.5">PRO VIP</span></div></div><nav class="hidden xl:flex items-center gap-space-md p-space-xs rounded-full bg-surface-container-low/70 backdrop-blur-md" data-active-classes="text-on-surface bg-surface-container-high rounded-full px-space-md py-space-xs"><a aria-current="page" class="font-label-md transition-colors text-on-surface bg-surface-container-high rounded-full px-space-md py-space-xs" data-path="discover" href="#">Discover</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-space-xs transition-colors rounded-full" data-path="curated-collections" href="#">Curated Collections</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-space-xs transition-colors rounded-full" data-path="ai-concierge" href="#">AI Concierge</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-space-xs transition-colors rounded-full" data-path="saved-tables" href="#">Saved Tables</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-space-xs transition-colors rounded-full" data-path="chef-specials" href="#">Chef Specials</a></nav><div class="flex items-center gap-space-md"><button class="hidden lg:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="font-label-md text-label-md">Bengaluru, KA</span></button><button class="hidden md:flex items-center px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="font-label-md text-label-md">INR ₹</span></button><button class="relative flex items-center justify-center w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(255,83,90,0.8)]"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_10px_rgba(233,195,73,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-surface-container-lowest min-h-[calc(100vh-140px)]"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Orbs behind main content -->
+<div class="relative w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin pb-space-xl overflow-hidden">
+<div class="absolute -top-40 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="absolute top-80 right-10 w-80 h-80 bg-primary-container/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<!-- Section 1: Hero & Vibe Search Console -->
+<div class="pt-6 pb-space-lg flex flex-col items-center text-center">
+<!-- Gold Sparkle Intelligence Pill -->
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1 rounded-full bg-surface-container-high border border-secondary/30 shadow-[0_0_24px_rgba(233,195,73,0.15)] mb-space-md">
+<span class="material-symbols-outlined text-secondary text-[16px] animate-pulse">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase font-semibold">Epicure Intelligence Engine • Powered by Groq</span>
+<span class="text-[10px] px-1.5 py-0.2 bg-secondary/20 text-secondary rounded font-mono font-bold">840 T/s</span>
+</div>
+<!-- Main Headline & Subtitle -->
+<h1 class="font-display text-display-mobile md:text-display text-on-surface font-bold tracking-tight max-w-4xl leading-tight">
+        Curating Exceptional Culinary Evenings Tailored to Your Vibe
+      </h1>
+<p class="mt-space-md font-body-lg text-body-lg text-on-surface-variant max-w-2xl text-balance">
+        State-of-the-art semantic recommendations matching mood, gastronomy, acoustics, and intimate twilight ambiance.
+      </p>
+<!-- Glassmorphic Search & Filter Console -->
+<div class="w-full mt-space-xl p-space-md md:p-space-lg rounded-2xl bg-surface-container-low/85 backdrop-blur-2xl border border-white/10 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.85),0_0_45px_rgba(233,195,73,0.05)] text-left relative">
+<!-- Filter Bar Row -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-end mb-space-md">
+<!-- Locality Selector -->
+<div class="md:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">explore</span> Locality & Environs
+            </label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-highest/60 hover:bg-surface-container-highest text-on-surface font-body-md text-body-md rounded-xl px-4 py-3 pr-10 border border-white/10 focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all cursor-pointer" id="locality-select">
+<option selected="" value="indiranagar">Indiranagar, Bangalore</option>
+<option value="lavelle-road">Lavelle Road & Central, Bangalore</option>
+<option value="koramangala">Koramangala, Bangalore</option>
+<option value="ub-city">UB City & Vittal Mallya, Bangalore</option>
+<option value="whitefield">Whitefield Inner Circle, Bangalore</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Budget Tier Toggles -->
+<div class="md:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">payments</span> Budget Spectrum
+            </label>
+<div class="grid grid-cols-3 gap-1.5 p-1 bg-surface-container-highest/60 rounded-xl border border-white/10" id="budget-group">
+<button class="budget-pill py-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-budget="low" type="button">
+                <₹400
+              </button>
+<button class="budget-pill py-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-budget="med" type="button">
+                ₹400-₹1.2k
+              </button>
+<button class="budget-pill py-2 text-center rounded-lg font-label-md text-label-md bg-primary-container text-white shadow-[0_0_12px_rgba(255,83,90,0.45)] border border-primary-container transition-all" data-budget="high" type="button">
+                >₹1,200
+              </button>
+</div>
+</div>
+<!-- Min Rating Interactive Slider -->
+<div class="md:col-span-4 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">star_half</span> Epicurean Standard
+              </label>
+<span class="font-label-md text-label-md text-secondary font-mono font-semibold" id="rating-label">Min: ★ 4.6</span>
+</div>
+<div class="py-2.5 px-3 bg-surface-container-highest/60 rounded-xl border border-white/10 flex items-center gap-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.0</span>
+<input class="w-full accent-secondary cursor-pointer h-1.5 rounded-lg bg-surface-container-low" id="rating-slider" max="4.9" min="4.0" step="0.1" type="range" value="4.6"/>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">5.0</span>
+</div>
+</div>
+</div>
+<!-- Cuisine Filter Tags Horizontal Scroll -->
+<div class="mb-space-md">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">restaurant</span> Culinary Orientation
+          </label>
+<div class="flex items-center gap-2 overflow-x-auto pb-1.5 scrollbar-none" id="cuisine-pills">
+<button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-colors" type="button">
+              All Cuisines
+            </button>
+<button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-primary-container/20 text-primary border border-primary-container shadow-[0_0_12px_rgba(255,83,90,0.25)] transition-colors" type="button">
+              Italian Contemporary
+            </button>
+<button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-colors" type="button">
+              Artisanal Pan-Asian
+            </button>
+<button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-colors" type="button">
+              Modern Indian Atelier
+            </button>
+<button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-colors" type="button">
+              European Bistro
+            </button>
+<button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-colors" type="button">
+              Speakeasy & Grill
+            </button>
+</div>
+</div>
+<!-- Free-form Prompt Input Box + Primary CTA -->
+<div class="flex flex-col lg:flex-row gap-space-sm items-stretch">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-4 top-4 text-secondary text-[22px]">psychology</span>
+<input class="w-full bg-surface-container-highest/70 hover:bg-surface-container-highest text-on-surface font-body-md text-body-md pl-12 pr-4 py-3.5 rounded-xl border border-white/10 focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/30 transition-all placeholder:text-on-surface-variant/60" id="vibe-prompt-input" placeholder="Describe your vibe or occasion (e.g., Romantic rooftop anniversary dinner with live acoustic music, candlelit ambiance)..." type="text" value="Romantic rooftop anniversary dinner with live acoustic music, panoramic twilight views, and fine wine pairing"/>
+</div>
+<button class="px-6 py-3.5 rounded-xl bg-primary-container text-white font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,83,90,0.5)] hover:shadow-[0_0_32px_rgba(255,83,90,0.8)] hover:bg-[#ff3c44] active:scale-[0.98] transition-all whitespace-nowrap group" id="search-trigger" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:rotate-12 transition-transform">auto_awesome</span>
+<span>Synthesize Tables</span>
+<span class="text-[11px] px-2 py-0.5 rounded-md bg-white/20 font-mono tracking-wide font-normal">0.18s</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 2: AI Recommendation Summary Banner -->
+<div class="w-full my-space-md p-space-md md:p-6 rounded-2xl bg-surface-container-low/90 backdrop-blur-xl border border-secondary/30 shadow-[0_16px_36px_rgba(0,0,0,0.65),0_0_35px_rgba(233,195,73,0.06)] relative overflow-hidden">
+<!-- Decorative background wave effect -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md border-b border-white/5 pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center border border-secondary/40 shadow-[0_0_12px_rgba(233,195,73,0.3)]">
+<span class="material-symbols-outlined text-secondary text-[18px]">neurology</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-secondary font-semibold flex items-center gap-2">
+              Groq LLM Semantic Synthesis
+              <span class="font-mono text-label-sm text-on-surface-variant font-normal tracking-wide bg-surface-container-high px-2 py-0.5 rounded">Llama-3.3-70b • 0.18s</span>
+</h2>
+</div>
+</div>
+<!-- Quick Match Meta Metrics -->
+<div class="flex flex-wrap items-center gap-2 md:gap-3">
+<span class="px-3 py-1 rounded-full bg-surface-container-high border border-white/5 font-label-md text-label-md text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> 3 Curated Matches
+          </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high border border-white/5 font-label-md text-label-md text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">tune</span> 98.4% Vibe Alignment
+          </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high border border-white/5 font-label-md text-label-md text-tertiary-fixed-dim flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5 Slots Left Tonight
+          </span>
+</div>
+</div>
+<!-- Conversational Narrative -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Based on your query for a <strong class="text-on-surface font-semibold">romantic anniversary celebration</strong> featuring <span class="text-secondary font-medium">live acoustic rhythms</span> and <span class="text-secondary font-medium">elevated skyline panoramas</span>, our sensory index filtered 420+ fine dining rooms in Bengaluru. These 3 venues guarantee curated candlelit seating, unamplified musical acoustics, and verified sommelier reserves.
+      </p>
+</div>
+<!-- Section 3: Curated Restaurant Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg mt-space-md">
+<!-- Card 1: Rooftop Romance (Aura Skylounge & Cellar) -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/95 border border-white/10 hover:border-primary-container/40 shadow-xl hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.9),0_0_30px_rgba(255,83,90,0.15)] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+<!-- Image Container with Aspect Ratio Lock and Vignette Gradient -->
+<div class="relative h-64 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="A romantic high-end rooftop fine dining restaurant at golden hour twilight overlooking a sprawling metropolis skyline. Glowing candles and low ambient string lights warm intimate wooden and marble tables set with crystal wine glasses and gourmet European dishes. Elegant couples savor wine against a backdrop of glowing twilight skyscrapers in warm amber and navy tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5wRN06sBgTQyS2zb1bC6tBB17S8pElvNRvtGrz5SWeAPAC6U25YNvcXcTuvwqiNwi7KGx2HjWzgP3DuReQEv-f4rbZnZCMLt4evLKgaNBKpX4Yk6_w5XHxueqhW5RORTmPoXUIzxCx-GnOAyeoel9HSSJn3Cz8pcz1KG-F4RBEaJQoZKzvYvH6jFdRXnzl_hpeMHQo6ZynBUof7CdKtNSqljpOmFeoxz3-YQTfAnhUFvZJWGQBpQmZw')">
+</div>
+<!-- Dark gradient scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<!-- Top Overlay Badges -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-secondary/40 text-secondary font-label-md text-label-md flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-[15px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span> 4.8 (840+)
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-on-surface font-label-sm text-label-sm tracking-wide">
+              Michelin Guide • 2024
+            </span>
+</div>
+<!-- Locality Badge at Seam -->
+<div class="absolute bottom-3 left-4 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+            Indiranagar • 12th Main Rooftop
+          </div>
+</div>
+<!-- Card Body Content -->
+<div class="p-5 flex flex-col flex-grow">
+<!-- Title & Price -->
+<div class="flex items-start justify-between gap-2 mb-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+              Aura Skylounge & Cellar
+            </h3>
+<button class="text-on-surface-variant hover:text-primary-container transition-colors p-1" title="Bookmark Venue" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+            Modern European & Wine Atelier • <span class="text-secondary font-medium">₹3,200 for two</span>
+</p>
+<!-- Atmosphere Highlight Tags -->
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Rooftop Seating</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Live Acoustic Jazz</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Sunset Horizon</span>
+<span class="px-2.5 py-0.5 rounded-md bg-secondary/10 text-secondary font-label-sm text-label-sm">Sommelier Cellar</span>
+</div>
+<!-- AI Why Box -->
+<div class="p-3.5 rounded-xl bg-surface-container-high/80 border border-secondary/30 mb-5 relative">
+<div class="flex items-center justify-between mb-1.5">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-secondary uppercase tracking-wider">
+<span class="material-symbols-outlined text-[15px] animate-pulse">auto_awesome</span> Why AI Recommended
+              </span>
+<span class="px-1.5 py-0.5 rounded bg-secondary/20 font-mono text-[11px] font-bold text-secondary">
+                99.2% Match
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Features private curtained twilight cabanas directly facing the city skyline, weekly unamplified cello duets on Thursdays, and a cellar with 280+ biodynamic vintages specifically paired for couples' tasting menus.
+            </p>
+</div>
+<!-- Card Actions -->
+<div class="mt-auto pt-2 grid grid-cols-2 gap-2.5">
+<button class="menu-btn py-2.5 px-3 rounded-xl border border-white/15 hover:border-secondary text-on-surface hover:text-secondary font-label-md text-label-md bg-surface-container-high/60 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">menu_book</span> Menu & Cellar
+            </button>
+<button class="reserve-btn py-2.5 px-3 rounded-xl bg-primary-container text-white font-label-md text-label-md shadow-[0_0_16px_rgba(255,83,90,0.4)] hover:shadow-[0_0_24px_rgba(255,83,90,0.7)] hover:bg-[#ff3c44] transition-all flex items-center justify-center gap-1 font-semibold" data-name="Aura Skylounge & Cellar" type="button">
+<span class="material-symbols-outlined text-[16px]">table_bar</span> Reserve Table
+            </button>
+</div>
+</div>
+</div>
+<!-- Card 2: Artisanal Cocktail & Speakeasy (The Velvet Botanist & Cask) -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/95 border border-white/10 hover:border-primary-container/40 shadow-xl hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.9),0_0_30px_rgba(255,83,90,0.15)] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+<!-- Image Container with Aspect Ratio Lock and Vignette Gradient -->
+<div class="relative h-64 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="A moody, dim-lit, luxurious speakeasy cocktail lounge bar in dark mahogany wood with glowing warm Edison bulb pendant lights. Shelves lined with illuminated top-shelf whiskey and amaro bottles behind an artisanal marble bar. Well-dressed patrons engage in intimate whispered conversation over craft crystal coupe cocktails." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnGpm6pxcut-yNL5_-lqHRUNoSwvqbvEVxF72PiS39E8Lw8r24jnSXok4lbb0pIZq368DdU9XsByd2EsQzsl_kO4Jksa9rlesnghEmEh5w4H8T97naqfZKmZDGOZrmj5jeO6Bayn9M3eCVSkMorXdsdNkpjoSCkVV2EjjfT04NYPnVhG2afl0ccpbP8hVC1Sf3alUE9LpNdTKGu6PV8B22atLWRmkfDvRH1bRO9cPwfO-WXD6kQGJ0Sg')">
+</div>
+<!-- Dark gradient scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<!-- Top Overlay Badges -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-secondary/40 text-secondary font-label-md text-label-md flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-[15px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span> 4.7 (1.2k)
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-secondary/30 text-secondary font-label-sm text-label-sm tracking-wide">
+              Asia's 50 Best Bars
+            </span>
+</div>
+<!-- Locality Badge at Seam -->
+<div class="absolute bottom-3 left-4 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+            Lavelle Road • Central Boulevard
+          </div>
+</div>
+<!-- Card Body Content -->
+<div class="p-5 flex flex-col flex-grow">
+<!-- Title & Price -->
+<div class="flex items-start justify-between gap-2 mb-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+              The Velvet Botanist & Cask
+            </h3>
+<button class="text-on-surface-variant hover:text-primary-container transition-colors p-1" title="Bookmark Venue" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+            Artisanal Cocktails & Tapas • <span class="text-secondary font-medium">₹2,600 for two</span>
+</p>
+<!-- Atmosphere Highlight Tags -->
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Mood Lighting</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Speakeasy Vibe</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Vinyl Jazz Lounge</span>
+<span class="px-2.5 py-0.5 rounded-md bg-secondary/10 text-secondary font-label-sm text-label-sm">Custom Infusions</span>
+</div>
+<!-- AI Why Box -->
+<div class="p-3.5 rounded-xl bg-surface-container-high/80 border border-secondary/30 mb-5 relative">
+<div class="flex items-center justify-between mb-1.5">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-secondary uppercase tracking-wider">
+<span class="material-symbols-outlined text-[15px] animate-pulse">auto_awesome</span> Why AI Recommended
+              </span>
+<span class="px-1.5 py-0.5 rounded bg-secondary/20 font-mono text-[11px] font-bold text-secondary">
+                97.8% Match
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Intimate mahogany booths with zero overhead glare and personalized bespoke cocktails crafted tableside by master mixologists. Ambient analog vinyl playback keeps conversation effortless and secluded.
+            </p>
+</div>
+<!-- Card Actions -->
+<div class="mt-auto pt-2 grid grid-cols-2 gap-2.5">
+<button class="menu-btn py-2.5 px-3 rounded-xl border border-white/15 hover:border-secondary text-on-surface hover:text-secondary font-label-md text-label-md bg-surface-container-high/60 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">local_bar</span> Cocktail Codex
+            </button>
+<button class="reserve-btn py-2.5 px-3 rounded-xl bg-primary-container text-white font-label-md text-label-md shadow-[0_0_16px_rgba(255,83,90,0.4)] hover:shadow-[0_0_24px_rgba(255,83,90,0.7)] hover:bg-[#ff3c44] transition-all flex items-center justify-center gap-1 font-semibold" data-name="The Velvet Botanist & Cask" type="button">
+<span class="material-symbols-outlined text-[16px]">table_bar</span> Reserve Table
+            </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Botanical Italian Conservatory (Giardino d'Inverno) -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/95 border border-white/10 hover:border-primary-container/40 shadow-xl hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.9),0_0_30px_rgba(255,83,90,0.15)] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+<!-- Image Container with Aspect Ratio Lock and Vignette Gradient -->
+<div class="relative h-64 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="An opulent botanical glasshouse conservatory restaurant interior at dusk. Vaulted glass arched ceilings with warm cascading brass chandeliers, lush tropical ferns, exotic palms, and candlelit marble tables where patrons savor authentic Italian pasta and wine. Moody, romantic, verdant greenhouse aesthetic with rich emerald and amber tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvJArKRbQtL3Blz3dCarK5XmwnMhfSp7EiU5PxXKXz3iob9ISDdD7fOTCYnKKAYTnf9Rtib2_7EaAa9sFQLAqCq2s_bNqubmix0z_DO23up4_yCFarSkMlQXjaOOkCn1v4GuzCwjcdNxK6k4cZuD1xDdae0CyHhyf1mzWUTBxY8ga4QUFvpTsuGGHie75Em74UEb_IqIkiwioTxaE2F-Uoq6TY3D94jknPRxL0Dt8M1D1AycoOHLMKcg')">
+</div>
+<!-- Dark gradient scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<!-- Top Overlay Badges -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-secondary/40 text-secondary font-label-md text-label-md flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-[15px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (2.1k)
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-on-surface font-label-sm text-label-sm tracking-wide">
+              Chef's Table Exclusive
+            </span>
+</div>
+<!-- Locality Badge at Seam -->
+<div class="absolute bottom-3 left-4 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+            Koramangala • 4th Block Green Enclave
+          </div>
+</div>
+<!-- Card Body Content -->
+<div class="p-5 flex flex-col flex-grow">
+<!-- Title & Price -->
+<div class="flex items-start justify-between gap-2 mb-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+              Giardino d'Inverno
+            </h3>
+<button class="text-on-surface-variant hover:text-primary-container transition-colors p-1" title="Bookmark Venue" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+            Haute Italian & Conservatory Dining • <span class="text-secondary font-medium">₹3,800 for two</span>
+</p>
+<!-- Atmosphere Highlight Tags -->
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Glass Conservatory</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Handmade Truffle Pasta</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Candlelit Garden</span>
+<span class="px-2.5 py-0.5 rounded-md bg-secondary/10 text-secondary font-label-sm text-label-sm">Private Alcoves</span>
+</div>
+<!-- AI Why Box -->
+<div class="p-3.5 rounded-xl bg-surface-container-high/80 border border-secondary/30 mb-5 relative">
+<div class="flex items-center justify-between mb-1.5">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-secondary uppercase tracking-wider">
+<span class="material-symbols-outlined text-[15px] animate-pulse">auto_awesome</span> Why AI Recommended
+              </span>
+<span class="px-1.5 py-0.5 rounded bg-secondary/20 font-mono text-[11px] font-bold text-secondary">
+                98.6% Match
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Handcrafted Roman pastas served beneath an illuminated Victorian glass conservatory canopy surrounded by exotic flora. Offers private candlelit alcoves with zero street bleed and bespoke anniversary surprises.
+            </p>
+</div>
+<!-- Card Actions -->
+<div class="mt-auto pt-2 grid grid-cols-2 gap-2.5">
+<button class="menu-btn py-2.5 px-3 rounded-xl border border-white/15 hover:border-secondary text-on-surface hover:text-secondary font-label-md text-label-md bg-surface-container-high/60 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">restaurant_menu</span> Tasting Menu
+            </button>
+<button class="reserve-btn py-2.5 px-3 rounded-xl bg-primary-container text-white font-label-md text-label-md shadow-[0_0_16px_rgba(255,83,90,0.4)] hover:shadow-[0_0_24px_rgba(255,83,90,0.7)] hover:bg-[#ff3c44] transition-all flex items-center justify-center gap-1 font-semibold" data-name="Giardino d'Inverno" type="button">
+<span class="material-symbols-outlined text-[16px]">table_bar</span> Reserve Table
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: AI Sommelier & Acoustic Comparison Matrix -->
+<div class="mt-space-xl p-space-lg rounded-2xl bg-surface-container-low/90 backdrop-blur-md border border-white/10 shadow-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Granular Atmosphere Profiling</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Acoustic & Dining Room Spectrum</h3>
+</div>
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-3 h-3 rounded bg-secondary"></span> Decibel Intimacy
+          </span>
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-3 h-3 rounded bg-primary-container"></span> Sommelier Curation
+          </span>
+</div>
+</div>
+<!-- Comparative Micro-Metrics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-4 rounded-xl bg-surface-container-high/60 border border-white/5">
+<div class="font-title-md text-title-md text-on-surface font-semibold mb-1">Aura Skylounge</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-4">Acoustic Jazz • Open-Air Skyline</div>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1 text-on-surface">
+<span>Sound Decibels (Low is Intimate)</span>
+<span class="text-secondary font-mono">48 dB (Tranquil)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1 text-on-surface">
+<span>Wine Pairing Depth</span>
+<span class="text-primary font-mono">96/100</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 96%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-high/60 border border-white/5">
+<div class="font-title-md text-title-md text-on-surface font-semibold mb-1">The Velvet Botanist</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-4">Warm Vinyl • Private Mahogany Booths</div>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1 text-on-surface">
+<span>Sound Decibels (Low is Intimate)</span>
+<span class="text-secondary font-mono">52 dB (Subdued)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 74%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1 text-on-surface">
+<span>Artisanal Spirit Mastery</span>
+<span class="text-primary font-mono">98/100</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 98%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-high/60 border border-white/5">
+<div class="font-title-md text-title-md text-on-surface font-semibold mb-1">Giardino d'Inverno</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-4">Fountain Cascade • Botanical Alcoves</div>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1 text-on-surface">
+<span>Sound Decibels (Low is Intimate)</span>
+<span class="text-secondary font-mono">44 dB (Secluded)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1 text-on-surface">
+<span>Tasting Menu Precision</span>
+<span class="text-primary font-mono">94/100</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Reservation Confirmation Modal Overlay (Dynamic preview) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 px-4" id="reservation-modal">
+<div class="w-full max-w-md bg-surface-container-low border border-secondary/40 rounded-2xl p-6 shadow-[0_0_50px_rgba(233,195,73,0.2)] text-left relative transform scale-95 transition-transform duration-300" id="modal-box">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface p-1 rounded-full" id="close-modal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center border border-primary-container/40">
+<span class="material-symbols-outlined text-[22px]">event_seat</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">VIP Priority Hold</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modal-restaurant-name">Aura Skylounge</h4>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+        Your AI Concierge has reserved VIP seating preference for 2 guests with twilight skyline orientation and anniversary greeting.
+      </p>
+<div class="space-y-3 bg-surface-container-highest/60 p-3.5 rounded-xl border border-white/5 mb-5 font-body-sm text-body-sm">
+<div class="flex justify-between text-on-surface">
+<span class="text-on-surface-variant">Time Slot:</span>
+<span class="font-medium text-secondary">Tonight • 8:30 PM IST</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span class="text-on-surface-variant">Table Spec:</span>
+<span class="font-medium">Skyline Cabana #04</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span class="text-on-surface-variant">Deposit Requirement:</span>
+<span class="font-medium text-on-surface">Complimentary (Epicure PRO VIP)</span>
+</div>
+</div>
+<button class="w-full py-3.5 rounded-xl bg-primary-container text-white font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,83,90,0.5)] hover:bg-[#ff3c44] transition-all font-semibold" id="confirm-booking-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Confirm Instant VIP Reservation</span>
+</button>
+</div>
+</div>
+<!-- Interactive Client-side Script for Filter Toggles, Sliders & Reservation Modal -->
+<script>
+    (function() {
+      // Rating Slider Sync
+      var slider = document.getElementById('rating-slider');
+      var label = document.getElementById('rating-label');
+      if (slider && label) {
+        slider.addEventListener('input', function(e) {
+          label.textContent = 'Min: ★ ' + parseFloat(e.target.value).toFixed(1);
+        });
+      }
+
+      // Budget Pill Toggles
+      var budgetButtons = document.querySelectorAll('.budget-pill');
+      budgetButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          budgetButtons.forEach(function(b) {
+            b.classList.remove('bg-primary-container', 'text-white', 'shadow-[0_0_12px_rgba(255,83,90,0.45)]', 'border-primary-container');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary-container', 'text-white', 'shadow-[0_0_12px_rgba(255,83,90,0.45)]', 'border-primary-container');
+          btn.classList.remove('text-on-surface-variant');
+        });
+      });
+
+      // Cuisine Tag Toggles
+      var cuisineButtons = document.querySelectorAll('.cuisine-btn');
+      cuisineButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          cuisineButtons.forEach(function(b) {
+            b.classList.remove('bg-primary-container/20', 'text-primary', 'border-primary-container', 'shadow-[0_0_12px_rgba(255,83,90,0.25)]');
+            b.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'border-white/5');
+          });
+          btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'border-white/5');
+          btn.classList.add('bg-primary-container/20', 'text-primary', 'border-primary-container', 'shadow-[0_0_12px_rgba(255,83,90,0.25)]');
+        });
+      });
+
+      // Modal Logic
+      var modal = document.getElementById('reservation-modal');
+      var modalBox = document.getElementById('modal-box');
+      var closeModal = document.getElementById('close-modal');
+      var confirmBtn = document.getElementById('confirm-booking-btn');
+      var restaurantTitle = document.getElementById('modal-restaurant-name');
+      var reserveButtons = document.querySelectorAll('.reserve-btn');
+
+      function openModal(name) {
+        if (restaurantTitle) restaurantTitle.textContent = name;
+        if (modal) {
+          modal.classList.remove('opacity-0', 'pointer-events-none');
+          modal.classList.add('opacity-100', 'pointer-events-auto');
+        }
+        if (modalBox) {
+          modalBox.classList.remove('scale-95');
+          modalBox.classList.add('scale-100');
+        }
+      }
+
+      function hideModal() {
+        if (modal) {
+          modal.classList.remove('opacity-100', 'pointer-events-auto');
+          modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+        if (modalBox) {
+          modalBox.classList.remove('scale-100');
+          modalBox.classList.add('scale-95');
+        }
+      }
+
+      reserveButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var name = btn.getAttribute('data-name') || 'Signature Table';
+          openModal(name);
+        });
+      });
+
+      if (closeModal) closeModal.addEventListener('click', hideModal);
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) hideModal();
+        });
+      }
+
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', function() {
+          confirmBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">sync</span> Table Confirmed!';
+          setTimeout(function() {
+            hideModal();
+            confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> Confirm Instant VIP Reservation';
+          }, 1200);
+        });
+      }
+
+      // Search Trigger Animation
+      var searchTrigger = document.getElementById('search-trigger');
+      if (searchTrigger) {
+        searchTrigger.addEventListener('click', function() {
+          var origHTML = searchTrigger.innerHTML;
+          searchTrigger.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">sync</span> Synthesizing...';
+          setTimeout(function() {
+            searchTrigger.innerHTML = origHTML;
+          }, 800);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-margin py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg bg-surface-container-low/40"><div class="flex flex-col sm:flex-row items-center gap-space-md text-center sm:text-left"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">Epicure <span class="text-secondary">AI</span></span></div><span class="hidden sm:inline text-on-surface-variant">•</span><div class="flex items-center gap-space-xs px-space-md py-0.5 rounded-full bg-surface-container"><span class="material-symbols-outlined text-[14px] text-secondary">auto_awesome</span><span class="font-label-sm text-label-sm text-on-surface-variant">Curated by Groq LLaMA 3.3</span></div></div><div class="flex flex-wrap items-center justify-center gap-space-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="fine-dining-partner-network" href="#">Partner Network</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms</a></div><div class="font-body-sm text-body-sm text-on-surface-variant text-center sm:text-right">© 2025 Epicure AI Inc. All rights reserved.</div></div></footer></body></html>

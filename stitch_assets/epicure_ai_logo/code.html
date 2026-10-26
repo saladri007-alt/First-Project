@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE082" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#9A7B1C" />
+    </linearGradient>
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5A67" />
+      <stop offset="100%" stop-color="#E23744" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="#121216" stroke="rgba(212, 175, 55, 0.35)" stroke-width="2"/>
+  <!-- Cloche / Dome icon fused with AI Sparkle -->
+  <path d="M50 22 C51.5 22 52.5 23 52.5 24.5 C52.5 25.4 52 26.2 51.2 26.7 C68 28.5 76 43 77 56 L23 56 C24 43 32 28.5 48.8 26.7 C48 26.2 47.5 25.4 47.5 24.5 C47.5 23 48.5 22 50 22 Z" fill="url(#goldGrad)" />
+  <rect x="20" y="60" width="60" height="4" rx="2" fill="url(#goldGrad)" />
+  <!-- Sparkles -->
+  <path d="M50 36 L52 43 L59 45 L52 47 L50 54 L48 47 L41 45 L48 43 Z" fill="#FFFFFF" />
+  <circle cx="70" cy="30" r="2.5" fill="#FCE082" filter="url(#goldGlow)" />
+  <circle cx="28" cy="36" r="2" fill="#E23744" />
+</svg>

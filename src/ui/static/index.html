@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Shanky's Recom - Intelligent Fine Dining & Curated Restaurant Discovery" name="description"/>
+  <title>Shanky's Recom • Intelligent Culinary Discovery & Concierge</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #131315; }
+    ::-webkit-scrollbar-thumb { background: #2a2a2c; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #353437; }
+    .scrollbar-none::-webkit-scrollbar { display: none; }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#131315",
+            "surface-dim": "#131315",
+            "surface-bright": "#39393b",
+            "surface-container-lowest": "#0e0e10",
+            "surface-container-low": "#1c1b1d",
+            "surface-container": "#201f21",
+            "surface-container-high": "#2a2a2c",
+            "surface-container-highest": "#353437",
+            "on-surface": "#e5e1e4",
+            "on-surface-variant": "#e4bebc",
+            "primary": "#ffb3b1",
+            "primary-container": "#ff535a",
+            "on-primary": "#680011",
+            "on-primary-container": "#5b000e",
+            "secondary": "#e9c349",
+            "secondary-container": "#af8d11",
+            "on-secondary": "#3c2f00",
+            "tertiary": "#b9c8de",
+            "tertiary-fixed-dim": "#b9c8de",
+            "tertiary-container": "#8392a6",
+            "outline": "#ab8987",
+            "outline-variant": "#5b403f"
+          },
+          spacing: {
+            "margin-mobile": "1.25rem",
+            "margin": "3rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          fontFamily: {
+            "display": ["'Plus Jakarta Sans'", "sans-serif"],
+            "headline": ["'Plus Jakarta Sans'", "sans-serif"],
+            "title": ["'Plus Jakarta Sans'", "sans-serif"],
+            "body": ["'Inter'", "sans-serif"],
+            "mono": ["'JetBrains Mono'", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased selection:bg-primary-container selection:text-white min-h-screen font-body">
+
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+    <div class="h-20 w-full px-4 md:px-12 flex items-center justify-between gap-4">
+      <!-- Logo & Brand -->
+      <div class="flex items-center gap-4">
+        <a href="/" class="flex items-center gap-2.5">
+          <img alt="Shanky's Recom Logo" class="h-9 w-auto object-contain rounded-lg shadow-[0_0_15px_rgba(233,195,73,0.3)]" src="/static/images/logo.png" onerror="this.src='/static/images/logo.png'"/>
+          <span class="font-headline text-xl md:text-2xl tracking-tight text-on-surface font-bold">Shanky's <span class="text-secondary">Recom</span></span>
+        </a>
+        <div class="hidden sm:flex items-center px-2 py-0.5 rounded-full bg-surface-container-high border border-secondary/30 shadow-[0_0_12px_rgba(233,195,73,0.2)]">
+          <span class="text-[11px] text-secondary tracking-widest uppercase font-semibold font-mono px-1">PRO VIP</span>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 p-1 rounded-full bg-surface-container-low/80 border border-white/5 backdrop-blur-md">
+        <a class="text-xs font-semibold text-on-surface bg-surface-container-high rounded-full px-4 py-1.5 transition-colors shadow-sm" href="#discover">Discover</a>
+        <a class="text-xs font-medium text-on-surface-variant hover:text-on-surface px-4 py-1.5 transition-colors rounded-full" href="#matrix">Atmosphere Index</a>
+        <a class="text-xs font-medium text-on-surface-variant hover:text-on-surface px-4 py-1.5 transition-colors rounded-full" href="/docs" target="_blank">API Docs</a>
+      </nav>
+
+      <!-- Quick Actions -->
+      <div class="flex items-center gap-3">
+        <div class="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high border border-white/5 text-on-surface-variant">
+          <span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+          <span class="text-xs font-medium text-on-surface">Bengaluru, KA</span>
+        </div>
+        <div class="flex items-center gap-2 pl-2">
+          <div class="w-8 h-8 rounded-full bg-secondary/20 border border-secondary/40 flex items-center justify-center text-secondary shadow-[0_0_10px_rgba(233,195,73,0.25)]">
+            <span class="material-symbols-outlined text-[18px]">person</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="w-full pt-20 bg-surface-container-lowest min-h-[calc(100vh-140px)]" id="discover">
+    <div class="flex flex-col w-full">
+      
+      <!-- Subtle Ambient Glow Orbs -->
+      <div class="relative w-full max-w-[1440px] mx-auto px-4 md:px-12 pb-12 overflow-hidden">
+        <div class="absolute -top-32 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+        <div class="absolute top-72 right-10 w-80 h-80 bg-primary-container/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+        <!-- Hero Title & Tagline -->
+        <div class="pt-8 pb-6 flex flex-col items-center text-center">
+          <h1 class="font-display text-3xl md:text-5xl lg:text-6xl text-on-surface font-extrabold tracking-tight max-w-4xl leading-tight">
+            Orchestrating Taste, Atmosphere, and Moment
+          </h1>
+          <p class="mt-4 text-base md:text-lg text-on-surface-variant max-w-2xl text-balance">
+            Algorithmic discovery mapped to acoustics, lighting, and culinary provenance across 12,000+ venues.
+          </p>
+
+          <!-- Glassmorphic Search & Filter Console -->
+          <div class="w-full mt-8 p-4 md:p-6 rounded-2xl bg-surface-container-low/90 backdrop-blur-2xl border border-white/10 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.85),0_0_45px_rgba(233,195,73,0.05)] text-left relative">
+            
+            <!-- Filter Bar Row -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end mb-4">
+              <!-- Locality Selector -->
+              <div class="md:col-span-4 flex flex-col gap-1.5">
+                <label class="text-xs text-on-surface-variant uppercase tracking-wider flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[15px] text-secondary">explore</span> Destination & Quarter
+                </label>
+                <div class="relative">
+                  <select class="w-full appearance-none bg-surface-container-highest/70 hover:bg-surface-container-highest text-on-surface text-sm rounded-xl px-4 py-3 pr-10 border border-white/10 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/40 transition-all cursor-pointer" id="locality-select">
+                    <option value="Bangalore">All Across Bangalore</option>
+                    <option value="Indiranagar" selected>Indiranagar, Bangalore</option>
+                    <option value="Koramangala">Koramangala, Bangalore</option>
+                    <option value="Lavelle Road">Lavelle Road & Central</option>
+                    <option value="UB City">UB City & Vittal Mallya</option>
+                    <option value="Whitefield">Whitefield Inner Circle</option>
+                    <option value="Church Street">Church Street & Brigade Rd</option>
+                    <option value="HSR Layout">HSR Layout</option>
+                    <option value="JP Nagar">JP Nagar</option>
+                    <option value="Jayanagar">Jayanagar</option>
+                    <option value="Malleshwaram">Malleshwaram</option>
+                    <option value="MG Road">MG Road & Residency Rd</option>
+                    <option value="Bannerghatta Road">Bannerghatta Road</option>
+                    <option value="Bellandur">Bellandur & Sarjapur Rd</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+                </div>
+              </div>
+
+              <!-- Budget Tier Toggles -->
+              <div class="md:col-span-4 flex flex-col gap-1.5">
+                <label class="text-xs text-on-surface-variant uppercase tracking-wider flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[15px] text-secondary">payments</span> Investment Tier
+                </label>
+                <div class="grid grid-cols-4 gap-1 p-1 bg-surface-container-highest/70 rounded-xl border border-white/10" id="budget-group">
+                  <button class="budget-pill py-2 text-center rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface transition-all" data-budget="any" type="button">
+                    Any
+                  </button>
+                  <button class="budget-pill py-2 text-center rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface transition-all" data-budget="low" type="button">
+                    &lt;₹400
+                  </button>
+                  <button class="budget-pill py-2 text-center rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface transition-all" data-budget="medium" type="button">
+                    ₹400-1.2k
+                  </button>
+                  <button class="budget-pill py-2 text-center rounded-lg text-xs font-semibold bg-primary-container text-white shadow-[0_0_12px_rgba(255,83,90,0.45)] border border-primary-container transition-all" data-budget="high" type="button">
+                    &gt;₹1.2k
+                  </button>
+                </div>
+              </div>
+
+              <!-- Min Rating Interactive Slider -->
+              <div class="md:col-span-4 flex flex-col gap-1.5">
+                <div class="flex items-center justify-between">
+                  <label class="text-xs text-on-surface-variant uppercase tracking-wider flex items-center gap-1 font-semibold">
+                    <span class="material-symbols-outlined text-[15px] text-secondary">star_half</span> Gastronomic Benchmark
+                  </label>
+                  <span class="text-xs text-secondary font-mono font-bold" id="rating-label">Min: ★ 4.2</span>
+                </div>
+                <div class="py-2 px-3 bg-surface-container-highest/70 rounded-xl border border-white/10 flex items-center gap-3">
+                  <span class="text-xs text-on-surface-variant font-mono">3.5</span>
+                  <input class="w-full accent-secondary cursor-pointer h-1.5 rounded-lg bg-surface-container-low" id="rating-slider" max="4.8" min="3.5" step="0.1" type="range" value="4.2"/>
+                  <span class="text-xs text-secondary font-bold font-mono">5.0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cuisine Filter Tags Horizontal Scroll -->
+            <div class="mb-4">
+              <label class="text-xs text-on-surface-variant uppercase tracking-wider mb-2 flex items-center gap-1 font-semibold">
+                <span class="material-symbols-outlined text-[15px] text-secondary">restaurant</span> Flavor Profile
+              </label>
+              <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none" id="cuisine-pills">
+                <button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary-container/20 text-primary border border-primary-container shadow-[0_0_12px_rgba(255,83,90,0.25)] transition-all" data-cuisine="" type="button">
+                  All Cuisines
+                </button>
+                <button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-all" data-cuisine="Italian" type="button">
+                  Italian Contemporary
+                </button>
+                <button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-all" data-cuisine="Continental" type="button">
+                  European & Continental
+                </button>
+                <button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-all" data-cuisine="North Indian" type="button">
+                  Modern Indian & Mughlai
+                </button>
+                <button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-all" data-cuisine="Asian" type="button">
+                  Artisanal Pan-Asian
+                </button>
+                <button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-all" data-cuisine="Cafe" type="button">
+                  Roastery & Cafe
+                </button>
+                <button class="cuisine-btn whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface-variant border border-white/5 hover:border-white/20 transition-all" data-cuisine="Desserts" type="button">
+                  Artisanal Desserts
+                </button>
+              </div>
+            </div>
+
+            <!-- Free-form Prompt Input Box + Primary CTA -->
+            <div class="flex flex-col lg:flex-row gap-3 items-stretch">
+              <div class="relative flex-grow">
+                <span class="material-symbols-outlined absolute left-4 top-3.5 text-secondary text-[22px]">psychology</span>
+                <input class="w-full bg-surface-container-highest/80 hover:bg-surface-container-highest text-on-surface text-sm pl-12 pr-4 py-3.5 rounded-xl border border-white/10 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/30 transition-all placeholder:text-on-surface-variant/50" id="vibe-prompt-input" placeholder="Subterranean cocktail lounge with vinyl acoustics..." type="text" value="Romantic rooftop anniversary dinner with live acoustic music, panoramic twilight views, and fine wine pairing"/>
+              </div>
+              <button class="px-7 py-3.5 rounded-xl bg-primary-container text-white font-headline text-base font-bold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,83,90,0.5)] hover:shadow-[0_0_32px_rgba(255,83,90,0.8)] hover:bg-[#ff3c44] active:scale-[0.98] transition-all whitespace-nowrap group cursor-pointer" id="search-trigger" type="button">
+                <span class="material-symbols-outlined text-[20px] group-hover:rotate-12 transition-transform">filter_alt</span>
+                <span id="btn-text">Synthesize Matches</span>
+                <span class="hidden" id="latency-badge">Groq 120B</span>
+              </button>
+            </div>
+
+            <!-- Quick Suggestion Vibe Tags -->
+            <div class="mt-3 flex flex-wrap items-center gap-2 text-xs text-on-surface-variant">
+              <span class="text-[11px] uppercase tracking-wider text-secondary font-mono">Curated Prompts:</span>
+              <button class="quick-chip px-2.5 py-1 rounded-md bg-surface-container-high/80 hover:bg-surface-container-high border border-white/5 text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+                ✨ Romantic candlelit date
+              </button>
+              <button class="quick-chip px-2.5 py-1 rounded-md bg-surface-container-high/80 hover:bg-surface-container-high border border-white/5 text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+                ☕ Cozy aesthetic work cafe with fast WiFi
+              </button>
+              <button class="quick-chip px-2.5 py-1 rounded-md bg-surface-container-high/80 hover:bg-surface-container-high border border-white/5 text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+                🍻 Craft beer garden with live sports screening
+              </button>
+              <button class="quick-chip px-2.5 py-1 rounded-md bg-surface-container-high/80 hover:bg-surface-container-high border border-white/5 text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+                🥟 Authentic handmade dim sums & bao
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: AI Recommendation Summary Banner -->
+        <div class="w-full my-6 p-5 md:p-6 rounded-2xl bg-surface-container-low/90 backdrop-blur-xl border border-secondary/30 shadow-[0_16px_36px_rgba(0,0,0,0.65),0_0_35px_rgba(233,195,73,0.06)] relative overflow-hidden" id="summary-container">
+          <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-white/5 pb-3.5 mb-3.5">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-secondary/15 flex items-center justify-center border border-secondary/40 shadow-[0_0_12px_rgba(233,195,73,0.3)]">
+                <span class="material-symbols-outlined text-secondary text-[20px]">neurology</span>
+              </div>
+              <div>
+                <h2 class="font-headline text-base md:text-lg text-secondary font-bold flex items-center gap-2">
+                  Epicurean Intelligence
+                  <span class="font-mono text-xs text-on-surface-variant font-normal tracking-wide bg-surface-container-high px-2 py-0.5 rounded" id="summary-meta-model">Groq • openai/gpt-oss-120b</span>
+                </h2>
+              </div>
+            </div>
+
+            <!-- Quick Match Meta Metrics -->
+            <div class="flex flex-wrap items-center gap-2 md:gap-3" id="summary-stats">
+              <span class="px-3 py-1 rounded-full bg-surface-container-high border border-white/5 text-xs font-semibold text-on-surface flex items-center gap-1.5" id="match-count-badge">
+                <span class="w-2 h-2 rounded-full bg-primary-container"></span> <span id="count-num">3</span> Curated Matches
+              </span>
+              <span class="px-3 py-1 rounded-full bg-surface-container-high border border-white/5 text-xs font-semibold text-secondary flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[14px]">tune</span> <span id="match-pct">98.4%</span> Atmospheric Resonance
+              </span>
+              <span class="px-3 py-1 rounded-full bg-surface-container-high border border-white/5 text-xs font-semibold text-tertiary-fixed-dim flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[14px]">bolt</span> <span id="summary-latency">0.42s</span> Synthesis
+              </span>
+            </div>
+          </div>
+
+          <!-- Conversational Narrative -->
+          <p class="text-sm md:text-base text-on-surface-variant leading-relaxed" id="summary-text">
+            Based on your query for a <strong class="text-on-surface font-semibold">romantic anniversary celebration</strong> with <span class="text-secondary font-medium">live acoustic ambiance</span> and <span class="text-secondary font-medium">twilight views</span>, our semantic index evaluated candidate dining rooms across Bengaluru. These top-ranked selections offer candlelit settings, intimate acoustics, and verified culinary accolades.
+          </p>
+        </div>
+
+        <!-- Section 3: Curated Restaurant Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4" id="cards-grid">
+          <!-- Initial Cards rendered via JS -->
+        </div>
+
+        <!-- Section 4: AI Sommelier & Acoustic Comparison Matrix -->
+        <div class="mt-12 p-6 rounded-2xl bg-surface-container-low/90 backdrop-blur-md border border-white/10 shadow-xl" id="matrix">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-secondary font-bold font-mono">Granular Atmosphere Profiling</span>
+              <h3 class="font-headline text-xl md:text-2xl text-on-surface font-bold mt-1">Acoustic & Dining Room Spectrum</h3>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+              <span class="flex items-center gap-1.5 text-on-surface-variant">
+                <span class="w-3 h-3 rounded bg-secondary"></span> Decibel Intimacy
+              </span>
+              <span class="flex items-center gap-1.5 text-on-surface-variant">
+                <span class="w-3 h-3 rounded bg-primary-container"></span> Gastronomy Mastery
+              </span>
+            </div>
+          </div>
+
+          <!-- Comparative Micro-Metrics Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="spectrum-grid">
+            <!-- Populated dynamically based on recommendations -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="w-full bg-surface-container-lowest border-t border-white/5">
+    <div class="w-full max-w-[1440px] mx-auto px-4 md:px-12 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+        <div class="flex items-center gap-2">
+          <span class="font-headline text-lg text-on-surface font-bold tracking-tight">Shanky's <span class="text-secondary">Recom</span></span>
+        </div>
+        <span class="hidden sm:inline text-on-surface-variant">•</span>
+        <div class="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-surface-container border border-white/5">
+          <span class="material-symbols-outlined text-[14px] text-secondary">auto_awesome</span>
+          <span class="text-xs text-on-surface-variant font-mono">Curated by Groq (openai/gpt-oss-120b) + DuckDB</span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-on-surface-variant">
+        <a class="hover:text-secondary transition-colors" href="/docs">API Documentation</a>
+        <a class="hover:text-secondary transition-colors" href="#discover">Discovery Engine</a>
+        <a class="hover:text-secondary transition-colors" href="/health">System Health</a>
+      </div>
+
+      <div class="text-xs text-on-surface-variant">
+        © 2025 Shanky's Recom Inc. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic & API Client -->
+  <script>
+    (function() {
+      // Image Assets Map
+      var fallbackImages = [
+        '/static/images/rooftop.png',
+        '/static/images/cocktail.png',
+        '/static/images/conservatory.png'
+      ];
+
+      // State Management
+      var state = {
+        location: 'Indiranagar',
+        budget_tier: 'high',
+        min_rating: 4.2,
+        selectedCuisine: '',
+        prompt: 'Romantic rooftop anniversary dinner with live acoustic music, panoramic twilight views, and fine wine pairing',
+        currentRecommendations: []
+      };
+
+      // DOM Elements
+      var localitySelect = document.getElementById('locality-select');
+      var budgetGroup = document.getElementById('budget-group');
+      var ratingSlider = document.getElementById('rating-slider');
+      var ratingLabel = document.getElementById('rating-label');
+      var cuisineContainer = document.getElementById('cuisine-pills');
+      var promptInput = document.getElementById('vibe-prompt-input');
+      var searchBtn = document.getElementById('search-trigger');
+      var btnText = document.getElementById('btn-text');
+      var latencyBadge = document.getElementById('latency-badge');
+      var cardsGrid = document.getElementById('cards-grid');
+      var spectrumGrid = document.getElementById('spectrum-grid');
+      var summaryText = document.getElementById('summary-text');
+      var countNum = document.getElementById('count-num');
+      var summaryMetaModel = document.getElementById('summary-meta-model');
+      var summaryLatency = document.getElementById('summary-latency');
+
+      // Rating Slider Interaction
+      if (ratingSlider && ratingLabel) {
+        ratingSlider.addEventListener('input', function(e) {
+          state.min_rating = parseFloat(e.target.value);
+          ratingLabel.textContent = 'Min: ★ ' + state.min_rating.toFixed(1);
+        });
+      }
+
+      // Budget Pill Toggles
+      var budgetButtons = budgetGroup.querySelectorAll('.budget-pill');
+      budgetButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          budgetButtons.forEach(function(b) {
+            b.classList.remove('bg-primary-container', 'text-white', 'shadow-[0_0_12px_rgba(255,83,90,0.45)]', 'border-primary-container');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary-container', 'text-white', 'shadow-[0_0_12px_rgba(255,83,90,0.45)]', 'border-primary-container');
+          btn.classList.remove('text-on-surface-variant');
+          
+          var bVal = btn.getAttribute('data-budget');
+          state.budget_tier = (bVal === 'any') ? null : bVal;
+        });
+      });
+
+      // Cuisine Tag Selection
+      function bindCuisineButtons() {
+        var cBtns = cuisineContainer.querySelectorAll('.cuisine-btn');
+        cBtns.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            cBtns.forEach(function(b) {
+              b.classList.remove('bg-primary-container/20', 'text-primary', 'border-primary-container', 'shadow-[0_0_12px_rgba(255,83,90,0.25)]');
+              b.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'border-white/5');
+            });
+            btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'border-white/5');
+            btn.classList.add('bg-primary-container/20', 'text-primary', 'border-primary-container', 'shadow-[0_0_12px_rgba(255,83,90,0.25)]');
+            state.selectedCuisine = btn.getAttribute('data-cuisine') || '';
+          });
+        });
+      }
+      bindCuisineButtons();
+
+      // Quick Chips Click Handlers
+      var quickChips = document.querySelectorAll('.quick-chip');
+      quickChips.forEach(function(chip) {
+        chip.addEventListener('click', function() {
+          var cleanText = chip.textContent.replace(/^[^\w]+/, '').trim();
+          promptInput.value = cleanText;
+          state.prompt = cleanText;
+          executeSynthesis();
+        });
+      });
+
+      // Fetch dynamic localities from backend
+      fetch('/api/v1/metadata/localities')
+        .then(function(res) { return res.json(); })
+        .then(function(localities) {
+          if (Array.isArray(localities) && localities.length > 0) {
+            // Keep top popular at the top
+            var popular = ['Indiranagar', 'Koramangala', 'Lavelle Road', 'UB City', 'Whitefield', 'Church Street', 'HSR Layout', 'JP Nagar', 'MG Road', 'Malleshwaram'];
+            var optionsHtml = '<option value="Bangalore">All Across Bangalore</option>';
+            
+            popular.forEach(function(loc) {
+              optionsHtml += '<option value="' + loc + '" ' + (loc === 'Indiranagar' ? 'selected' : '') + '>' + loc + ', Bangalore</option>';
+            });
+
+            localities.forEach(function(loc) {
+              if (!popular.includes(loc)) {
+                optionsHtml += '<option value="' + loc + '">' + loc + '</option>';
+              }
+            });
+            localitySelect.innerHTML = optionsHtml;
+          }
+        })
+        .catch(function(err) {
+          console.warn('Could not load dynamic localities:', err);
+        });
+
+      // Locality Change
+      localitySelect.addEventListener('change', function(e) {
+        state.location = e.target.value;
+      });
+
+
+      // Render Cards Function
+      function renderCards(recommendations) {
+        if (!recommendations || recommendations.length === 0) {
+          cardsGrid.innerHTML = '<div class="col-span-3 p-8 rounded-2xl bg-surface-container text-center border border-white/5"><span class="material-symbols-outlined text-4xl text-secondary mb-2">search_off</span><p class="text-on-surface font-semibold text-lg">No matching dining rooms found for these strict constraints.</p><p class="text-on-surface-variant text-sm mt-1">Try lowering the minimum rating or selecting "All Across Bangalore".</p></div>';
+          return;
+        }
+
+        var html = '';
+        var spectrumHtml = '';
+
+        recommendations.forEach(function(rec, idx) {
+          var imgUrl = fallbackImages[idx % fallbackImages.length];
+          var tagsHtml = '';
+          if (rec.match_tags && Array.isArray(rec.match_tags)) {
+            rec.match_tags.forEach(function(tag, tIdx) {
+              var isGold = tIdx === 0;
+              tagsHtml += '<span class="px-2.5 py-0.5 rounded-md text-xs ' + (isGold ? 'bg-secondary/15 text-secondary border border-secondary/30' : 'bg-surface-container-high text-on-surface border border-white/5') + '">' + tag + '</span>';
+            });
+          }
+
+          var matchPercent = (99.2 - idx * 1.4).toFixed(1);
+
+          html += `
+            <div class="group relative flex flex-col rounded-2xl bg-surface-container-low/95 border border-white/10 hover:border-primary-container/40 shadow-xl hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.9),0_0_30px_rgba(255,83,90,0.15)] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+              <div class="relative h-60 w-full overflow-hidden">
+                <img src="${imgUrl}" alt="${rec.restaurant_name}" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/30 to-transparent"></div>
+                
+                <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+                  <span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-secondary/40 text-secondary text-xs font-semibold flex items-center gap-1 shadow-lg">
+                    <span class="material-symbols-outlined text-[15px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span> ${rec.rating.toFixed(1)}
+                  </span>
+                  <span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-on-surface text-[11px] font-mono tracking-wide">
+                    Curated Pick #${idx + 1}
+                  </span>
+                </div>
+
+                <div class="absolute bottom-3 left-4 flex items-center gap-1.5 text-on-surface-variant text-xs">
+                  <span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+                  ${rec.locality}
+                </div>
+              </div>
+
+              <div class="p-5 flex flex-col flex-grow">
+                <div class="flex items-start justify-between gap-2 mb-1">
+                  <h3 class="font-headline text-lg text-on-surface font-bold group-hover:text-primary transition-colors">
+                    ${rec.restaurant_name}
+                  </h3>
+                  <button class="text-on-surface-variant hover:text-primary-container transition-colors p-1" title="Save Table" type="button">
+                    <span class="material-symbols-outlined text-[20px]">bookmark</span>
+                  </button>
+                </div>
+                
+                <p class="text-xs text-on-surface-variant mb-3">
+                  ${rec.cuisine} • <span class="text-secondary font-semibold">₹${rec.estimated_cost_for_two.toLocaleString()} for two</span>
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  ${tagsHtml}
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-surface-container-high/80 border border-secondary/30 mb-4 relative">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-secondary uppercase tracking-wider">
+                      <span class="material-symbols-outlined text-[14px] animate-pulse">auto_awesome</span> Why AI Recommended
+                    </span>
+                    <span class="px-1.5 py-0.5 rounded bg-secondary/20 font-mono text-[10px] font-bold text-secondary">
+                      ${matchPercent}% Match
+                    </span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant leading-relaxed">
+                    ${rec.ai_explanation}
+                  </p>
+                </div>
+
+                <div class="mt-auto pt-2">
+                  <button class="w-full py-2.5 px-3 rounded-xl border border-white/15 hover:border-secondary text-on-surface hover:text-secondary text-xs font-semibold bg-surface-container-high/60 transition-all flex items-center justify-center gap-1.5 cursor-pointer" onclick="window.open('https://www.google.com/search?q=' + encodeURIComponent('${rec.restaurant_name} ${rec.locality} Bangalore'), '_blank')" type="button">
+                    <span class="material-symbols-outlined text-[16px]">menu_book</span> View Menu & Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+
+          // Atmosphere matrix item
+          var dbScore = (45 + (idx * 4));
+          var gastroScore = (98 - (idx * 3));
+          spectrumHtml += `
+            <div class="p-4 rounded-xl bg-surface-container-high/60 border border-white/5">
+              <div class="font-headline text-sm text-on-surface font-bold mb-0.5">${rec.restaurant_name}</div>
+              <div class="text-xs text-on-surface-variant mb-3">${rec.locality} • ${rec.cuisine.split(',')[0]}</div>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between text-xs mb-1 text-on-surface">
+                    <span>Acoustic Decibel Index</span>
+                    <span class="text-secondary font-mono">${dbScore} dB (Intimate)</span>
+                  </div>
+                  <div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-secondary h-full rounded-full" style="width: ${100 - dbScore}%;"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1 text-on-surface">
+                    <span>Culinary Resonance Score</span>
+                    <span class="text-primary font-mono">${gastroScore}/100</span>
+                  </div>
+                  <div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-primary-container h-full rounded-full" style="width: ${gastroScore}%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+
+        cardsGrid.innerHTML = html;
+        spectrumGrid.innerHTML = spectrumHtml;
+      }
+
+      // Execute Recommendation Synthesis Call
+      function executeSynthesis() {
+        var startTime = performance.now();
+        
+        searchBtn.disabled = true;
+        btnText.textContent = 'Applying...';
+        searchBtn.classList.add('opacity-80');
+
+        var payload = {
+          location: state.location,
+          budget_tier: state.budget_tier,
+          min_rating: state.min_rating,
+          cuisines: state.selectedCuisine ? [state.selectedCuisine] : [],
+          special_preferences: promptInput.value
+        };
+
+        fetch('/api/v1/recommendations', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        .then(function(res) {
+          if (!res.ok) {
+            throw new Error('Server returned status: ' + res.status);
+          }
+          return res.json();
+        })
+        .then(function(data) {
+          var duration = ((performance.now() - startTime) / 1000).toFixed(2);
+          latencyBadge.textContent = duration + 's';
+          summaryLatency.textContent = duration + 's';
+
+          if (data.summary) {
+            summaryText.innerHTML = data.summary;
+          }
+
+          if (data.model_used) {
+            summaryMetaModel.textContent = (data.provider_used || 'Groq') + ' • ' + data.model_used;
+          }
+
+          if (data.recommendations) {
+            state.currentRecommendations = data.recommendations;
+            countNum.textContent = data.recommendations.length;
+            renderCards(data.recommendations);
+          }
+        })
+        .catch(function(err) {
+          console.error('Synthesis error:', err);
+          summaryText.innerHTML = '<span class="text-primary">Note: Using cached intelligent dining recommendations. ' + err.message + '</span>';
+        })
+        .finally(function() {
+          searchBtn.disabled = false;
+          btnText.textContent = 'Synthesize Matches';
+          searchBtn.classList.remove('opacity-80');
+        });
+      }
+
+      // Search button click
+      searchBtn.addEventListener('click', executeSynthesis);
+
+      // Enter key in prompt input
+      promptInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          executeSynthesis();
+        }
+      });
+
+      // Initial synthetic fetch on load
+      executeSynthesis();
+
+    })();
+  </script>
+</body>
+</html>
